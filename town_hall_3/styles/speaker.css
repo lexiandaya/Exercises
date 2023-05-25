@@ -33,6 +33,7 @@ header {
 header h2 {
 	font-size: 175%;
 	color: #800000;
+	font-family: Stencil;
 }
 header h3 {
 	font-size: 130%;
@@ -126,6 +127,19 @@ article img {
 	border: 1px solid black;
 }
 
+picture {
+	float: right;
+	margin: 1.5em;
+}
+
+figcaption {
+	display: block;
+	font-weight: bold;
+	padding-top: .25em;
+	margin-bottom: 1em;
+	border-bottom: 1px solid black;
+}
+
 /* the styles for the aside */
 aside {
 	width: 215px;
@@ -156,4 +170,9 @@ footer p {
 	text-align: center;
 	color: white;
 	padding: 1em 0;
+}
+
+@font-face {
+	font-family: Stencil;
+	src: url(STENCIL.TTF);
 }
