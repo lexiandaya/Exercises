@@ -32,22 +32,13 @@
 	</nav>
 	<main>
 		<section>
-			<h1>Become a Member</h1>
+			<h1>Order Form</h1>
     		<form action="register_account.html" method="get"
         		name="registration_form" id="registration_form">
     			<fieldset>
-	        		<legend>Registration Information</legend>
+	        		<legend>Member Information</legend>
 	        		<label for="email">E-Mail:</label>
 	        		<input type="email" name="email" id="email" autofocus required><br>
-	        		<label for="password">Password:</label>
-	        		<input type="password" name="password" id="password" required
-	                   	   placeholder="At least 6 letters or numbers"
-	                   	   pattern="[a-zA-Z0-9]{6,}" title="Must be at least 6 alphanumeric characters"><br>
-	        		<label for="verify">Verify Password:</label>
-	        		<input type="password" name="verify" id="verify" required><br>
-    			</fieldset>
-    			<fieldset>
-        			<legend>Member Information</legend>
         			<label for="first_name">First Name:</label>
 					<input type="text" name="first_name" id="first_name" required><br>
 					<label for="last_name">Last Name:</label>
@@ -66,20 +57,59 @@
 				       	   pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Must be 999-999-999 format"><br>
 				</fieldset>
 				<fieldset>
-					<legend>Membership Information</legend>
-					<label for="membership_type">Membership Type:</label>
+					<legend>Ordering Information</legend>
+					<label for="membership_type">Order Type:</label>
 					<select name="membership_type" id="membership_type">
-				    	<option value="j">Junior</option>
-				    	<option value="r">Regular</option>            
-				    	<option value="c">Charter</option>
+				    	<option value="member">Member Package</option>
+				    	<option value="donor">Donor Package</option>            
+				    	<option value="single">Single Tickets</option>
 					</select><br>
-					<label for="starting_date">Starting Date:</label>
-					<input type="date" name="starting_date" id="starting_date" required><br>
 					<label for="tickets">Tickets for Guests:</label>
-					<input type="number" name="tickets" id="tickets" value="2" min="1" max="4" placeholder="from 1 to 4"><br>
+					<input type="text" name="tickets" id="tickets" placeholder="Number of Single Tickets"><br>
+				</fieldset>
+				<fieldset id="payment-method">
+					<legend>Payment Method</legend>
+					<input type="radio" name="payment-method" id="method-1" >
+					<label for="method-1">Bill Me</label>
+					<input type="radio" name="payment-method" id="method-2" >
+					<label for="method-2">Credit Card</label>
+				</fieldset>
+				<fieldset>
+					<legend>Credit Card Information</legend>
+					<label for="card_type">Card Type:</label>
+					<select name="card_type" id="card_type">
+				    	<option value="visa">Visa</option>
+				    	<option value="discover">Discover</option>            
+				    	<option value="mastercard">Mastercard</option>
+					</select><br>
+					<label for="card_number">Card Number:</label>
+					<input type="text" name="card_number" id="card_number" placeholder="16 digits"
+						pattern="\d{16}" title="Credit Card number is 16 digits"><br>
+					<label for="ex-month">Expiration Date:</label>
+					<select name="ex-month" id="ex-month">
+				    	<option value="jan">January</option>
+				    	<option value="feb">February</option>            
+				    	<option value="Mar">March</option>
+						<option value="apr">April</option>
+				    	<option value="may">May</option>            
+				    	<option value="june">June</option>
+						<option value="july">July</option>
+				    	<option value="aug">August</option>            
+				    	<option value="sept">September</option>
+						<option value="oct">October</option>
+				    	<option value="nov">November</option>            
+				    	<option value="dec">December</option>
+					</select>
+					<select name="ex-year" id="ex-year">
+				    	<option value="23">2023</option>
+				    	<option value="24">2024</option>            
+				    	<option value="25">2025</option>
+						<option value="26">2026</option>
+				    	<option value="27">2027</option> 
+					</select>       
 				</fieldset>
 				<fieldset id="buttons">
-					<legend>Submit Your Membership</legend>
+					<legend>Submit Your Order</legend>
 					<label>&nbsp;</label>
 					<input type="submit" id="submit" value="Submit">
 					<input type="reset" id="reset" value="Reset Fields"><br>
