@@ -120,6 +120,29 @@ section li {
 	padding-bottom: .35em;
 }
 
+/* table */
+
+table {
+	border-collapse:collapse ;
+}
+
+th, td {
+	padding: .2em .7em;
+	text-align: right;
+}
+
+th.left, td.left {
+	text-align: left;
+}
+
+tr.border-top {
+	border-top: 2px solid #800000 ;
+}
+
+tr.border-bottom {
+	border-bottom: 2px solid #800000 ;
+}
+
 /* the styles for the article */
 article {
 	padding: .5em 0;
